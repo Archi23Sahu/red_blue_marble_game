@@ -1,6 +1,3 @@
-Name: Archi Sahu
-Id: 1002104548
-
 Programming Langauge: Python 3.11.2
 
 Code structure:
