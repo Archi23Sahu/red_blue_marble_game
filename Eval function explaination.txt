@@ -1,0 +1,9 @@
+Function Explanation:
+
+eval_best_computer_move(marbles_piles, depth): This function uses the Minimax algorithm along with alpha-beta pruning to decide the best move for the computer player. The best move is returned after using min_max_alpha_beta_pruning with the proper parameters
+
+min_max_alpha_beta_pruning(marbles_piles, max_player, alpha, beta, depth): This is the basic alpha-beta pruning Minimax algorithm. Recursively exploring the game tree, it assesses the best course of action for the maximising and minimising players. Depending on the value of the max_player argument, either the maximising player (True) or the minimising player (False) will take the turn. The least and maximum scores that a player who maximises their score might expect to receive are represented by alpha and beta, respectively. How deeply the programme should search the game tree is indicated by the depth parameter.If it is in a terminal state or the maximum depth has been reached, it calculates the final score using calculate_final_score and returns it along with None.Depending on whether the player is maximising or minimising, best_value is initialised.It recursively iterates through all potential movements produced by enerate_next_moves.
+
+calculate_final_score(marbles_piles, depth): Based on the current configuration of the marble piles, this function determines the game's final score. It determines the game's ultimate score if there are no marbles left or the specified depth has been reached. The score is determined by 3×number of blue marbles−2×number of red marbles. It returns None if neither the depth nor the end of the game have been reached.
+
+generate_next_moves(marbles_piles): In this function, depending on the number of red and blue marbles available, it makes moves by taking one red marble or one blue marble out at a time.
